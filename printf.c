@@ -1,4 +1,5 @@
 #include "main.h"
+#include <stdarg.h>
 
 /**
  * _printf - is a function that formats and prints data
@@ -9,64 +10,64 @@ int _printf(const char *format, ...)
 {
 	const char *p;
 	unsigned int i;
-	int t;
-	int m = 0;
-	va_list conspc;
+	int q;
+	int k = 0;
+	va_list conspec;
 	char *s;
 
 	if (!format)
 	{
 		return (-1);
 	}
-	va_start(conspc, format);
+	va_start(conspec, format);
 	for (p = format; *p != '\0'; p++)
 	{
 		if (*p != '%')
 		{
-			_putchar(*p, &m);
+			_putchar(*p, &k);
 			continue;
 		}
 		p++;
 		switch (*p)
 		{
 		case 'c':
-			i = va_arg(conspc, int);
-			_putchar(i, &m);
+			i = va_arg(conspec, int);
+			_putchar(i, &k);
 			break;
 		case 's':
-			s = va_arg(conspc, char *);
-			_puts(s, &m);
+			s = va_arg(conspec, char *);
+			_puts(s, &k);
 			break;
 		case '%':
-			_putchar('%', &m);
+			_putchar('%', &k);
 			break;
 		case 'd':
-			t = va_arg(conspc, int);
-			_print_number(j, &m);
+			q = va_arg(conspec, int);
+			_print_number(q, &k);
 			break;
 		case 'i':
-			t = va_arg(conspc, int);
-			_print_number(j, &m);
+			q = va_arg(conspec, int);
+			_print_number(q, &k);
 			break;
 		case 'r':
-			s = va_arg(conspc, char *);
-			_rev_string(s, &m);
+			s = va_arg(conspec, char *);
+			_rev_string(s, &k);
 			break;
 		case 'b':
-			i = va_arg(conspc, int);
-			_print_binary(i, &m);
+			i = va_arg(conspec, int);
+			_print_binary(i, &k);
 			break;
 		case 'R':
-			s = va_arg(conspc, char *);
-			_rot13(s, &m);
+			s = va_arg(conspec, char *);
+			_rot13(s, &k);
 			break;
 		case '\0':
 			return (-1);
 		default:
-			_putchar('%', &m);
-			_putchar(*p, &m);
+			_putchar('%', &k);
+			_putchar(*p, &k);
 		}
 	}
-	va_end(conspc);
-	return (m);
+	va_end(conspec);
+	return (k);
 }
