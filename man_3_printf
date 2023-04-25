@@ -4,7 +4,7 @@
 
 .SH SYNOPSIS
 
-.B #include “holberton.h”
+.B #include “man.h”
 .PP
 .B #include <stdarg.h>
 .PP
