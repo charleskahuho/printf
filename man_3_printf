@@ -1,5 +1,3 @@
-.TH _printf 3 "31 July 2019" "version 1.0"
-
 .SH NAME
 
     _printf - Prints to stdout!
@@ -62,9 +60,9 @@ is complete specification.
 
 .SH AUTHORS
 
-Osama Basheer (838@holbertonschool.com)
+1.Charles Kahuho
 
-Gareth Brickman (977@holbertonschool.com)
+2.Antony Omondi
 
 .SH SEE ALSO
 
